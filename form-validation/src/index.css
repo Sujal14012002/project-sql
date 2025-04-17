@@ -1,0 +1,273 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.container{
+  height: 580px;
+  width: 500px;
+  background-color: red;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  text-align: center;
+  border:1px solid white;
+}
+
+#names{
+  position: relative;
+  right: 47px;
+}
+
+
+.contest-box{
+  height: 530px;
+  width: 450px;
+}
+span{
+  font-size:40px;
+}
+input{
+  border: none;
+  background-color: white;
+  height: 30px;
+  font-size: 20px;
+  color: black;
+  
+}
+/* #city{
+  position: relative;
+  right:65px;
+} */
+
+#countryname{
+  height: 35px;
+  width: 150px;
+  border: 1px solid white;
+  font-size: 25px;
+  border-radius: 5px;
+  position: relative;
+  right: 22px;
+  
+}
+
+#statename{
+
+  height: 35px;
+  width: 150px;
+  border: 1px solid white;
+  font-size: 25px;
+  border-radius: 5px;
+  position: relative;
+  right: -5px;
+}
+
+#cityname{
+  height: 35px;
+  width: 150px;
+  border: 1px solid white;
+  font-size: 25px;
+  border-radius: 5px;
+  position: relative;
+  right: -10px;
+
+}
+#sd{
+  position: relative;
+  left: 180px;
+  border-radius: 15px;
+}
+
+.contestbox1{
+  height: 60px;
+}
+.name{
+  position: relative;
+  left: 45px;
+  bottom: 2px;
+}
+.email{
+  position: relative;
+  left: 43px;
+  bottom: 2px;
+
+}
+.pass{
+  position: relative;
+  left: 12px;
+  bottom: 2px;
+
+}
+
+.mobile{
+  position: relative;
+  left: 35px;
+  bottom: 2px;
+}
+
+.zipcode{
+  position: relative;
+  left: 27px;
+  bottom: 2px;
+}
+.add{
+  position: relative;
+  left: 36px;
+  bottom: 2px;
+
+}
+#mobiles{
+  position: relative;
+  right: 36px;
+}
+#emails{
+  
+    position: relative;
+    right: 45px;
+  
+}
+
+#zipcodes{
+  position: relative;
+  right: 27px;
+}
+
+#address{
+  position: relative;
+  right: 38px;
+
+}
+
+#passwords{
+  position: relative;
+  right: 15px;
+
+}
+
+#city{
+  position: relative;
+  right: 103px;
+}
+.ns{
+  position: relative;
+  left: 25px;
+}
+.es{
+  position: relative;
+  left: 28px;
+}
+.ms{
+  position: relative;
+  left: 21px;
+
+}
+
+.zs{
+  position: relative;
+  left: 14px;
+
+}
+.as{
+  position: relative;
+  left: 23px;
+
+}
+.ps{
+  position: relative;
+  left: -1px;
+
+}
+
+#city{
+  position: relative;
+  right: 113px;
+}
+#state{
+  position: relative;
+  right: 107px;
+
+}
+#country{
+  position: relative;
+  right: 85px;
+
+}
+.citys{
+  position: relative;
+  left:110px;
+
+}
+
+.countrys{
+  position: relative;
+  left: 50px;
+}
+
+.states{
+  position: relative;
+  left: 97px;
+}
