@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import axios from 'axios';
 
+
+
 function App() {
+
+
+  
+
+  const[data,setdata]=useState([])
   const [values, setvalues] = useState({
     name: "",
     email: "",
@@ -29,13 +36,32 @@ function App() {
    
     try {
       const response = await axios.post("http://localhost:3000/post", values);
-      console.log(response);
+      
+     
     } catch (error) {
       console.log(error);
     }
-
-    console.log(values);
+      console.log(values)
+   
   }
+
+  useEffect(() => {
+    const getapi = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/users");
+        console.log(response.data);  
+        setdata(response.data);      
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    getapi();
+  }, []);
+  data.forEach((val)=>{
+    console.log(val.name)
+  })
+  
+
 
   return (
     <>
@@ -221,9 +247,53 @@ function App() {
             <br />
 
             <input id="sd" type="submit" />
+            
           </form>
         </div>
       </div>
+      
+     <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Zipcode</th>
+          <th>Adress</th>
+          <th>Password</th>
+          <th>Country</th>
+          <th>State</th>
+          <th>City</th>
+
+        </tr>
+        <tbody>
+          {
+            data.map((element,indx)=>{
+              console.log(element.mobile);
+              return(
+                <>
+                <tr key={indx}>
+                <td>{element.name}</td>
+                <td>{element.email}</td>
+                <td>{element.mobile}</td>
+                <td>{element.zipcode}</td>
+                <td>{element.Adress}</td>
+                <td>{element.password}</td>
+                <td>{element.city}</td>
+                <td>{element.state}</td>
+                <td>{element.counrty}</td>
+
+              </tr>
+                </>
+              )
+              
+            })
+          }
+        </tbody>
+      </thead>
+     </table>
+
+      
     </>
   );
 }

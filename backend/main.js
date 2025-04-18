@@ -74,11 +74,10 @@ const cors = require("cors");
 
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// DB connection
+
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -94,7 +93,23 @@ connection.connect((err) => {
   }
 });
 
-// Route using stored procedure
+
+app.get('/users', (req, res) => {
+  connection.query('SELECT * FROM schoolingdata', (err, results) => {
+    if (err) return res.status(500).send(err);
+    res.json(results);
+  });
+});
+
+
+
+
+
+
+
+
+
+
 app.post("/post", (req, res) => {
   const {
     name,
@@ -119,11 +134,13 @@ app.post("/post", (req, res) => {
         return res.status(500).send("Error inserting data via stored procedure");
       }
       res.send(" Data inserted via stored procedure!");
+    
     }
   );
 });
 
-// Server listener
 app.listen(3000, () => {
   console.log(" Server running on http://localhost:3000");
 });
+
+
